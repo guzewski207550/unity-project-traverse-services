@@ -17,8 +17,9 @@ import com.example.makolab.unity.traverse.models.SaveFurnitureConfigurationReque
 public class FurnitureEndpoint {
 	
 	@RequestMapping(value = "/save", method = RequestMethod.POST)
-	public ResponseEntity<Void> saveFurnitureConfiguration(@RequestBody SaveFurnitureConfigurationRequest saveFurnitureConfigurationRequest){
+	public ResponseEntity<FurnitureConfiguration> saveFurnitureConfiguration(@RequestBody SaveFurnitureConfigurationRequest saveFurnitureConfigurationRequest){
 		FurnitureConfiguration furnitureConfiguration = new FurnitureConfiguration(saveFurnitureConfigurationRequest.getConfigurationElements());
-		return new ResponseEntity<Void>(HttpStatus.OK);
+		
+		return new ResponseEntity<FurnitureConfiguration>(furnitureConfiguration, HttpStatus.OK);
 	}
 }

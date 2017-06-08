@@ -5,13 +5,11 @@ import java.util.UUID;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.stereotype.Component;
 
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-@Component
 @Document(collection = "furnitureConfigurations")
 @ToString
 public class FurnitureConfiguration {
