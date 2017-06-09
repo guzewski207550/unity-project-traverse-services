@@ -15,14 +15,14 @@ import lombok.ToString;
 public class FurnitureConfiguration {
 	@Id
 	@Getter
-	private UUID id;
+	private String id;
 
 	@Setter
 	@Getter
 	private List<Integer> configurationElements;
 
 	public FurnitureConfiguration(List<Integer> configurationElements) {
-		this.id = UUID.randomUUID();
+		this.id = UUID.randomUUID().toString();
 		this.configurationElements = configurationElements;
 	}
 }
